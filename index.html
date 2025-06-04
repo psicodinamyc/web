@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome debe estar en el <head> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <nav class="navbar">
+        
+        <div class="nav-links">
+            <a href="/intro.html">Inicio</a>
+            <a href="#">Servicios</a>
+            <a href="#">Contacto</a>
+        </div>
+        <img src="/images/logo_2_no_png.png" alt="Logo" class="logo">
+
+        <div class="social-buttons">
+
+  <a href="https://wa.me/543625314001?text=Hola%20Dr.%20Villamandos%2C%20quisiera%20hacer%20una%20consulta" target="_blank">
+    <button class="whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</button>
+  </a>
+
+  <a href=https://www.facebook.com/mauricio.villamandos?locale=es_LA target="_blank">
+    <button class="facebook"><i class="fab fa-facebook-f"></i> Facebook</button>
+  </a>
+
+  <a href="https://https://www.instagram.com/elperrofenrir/" target="_blank">
+    <button class="instagram"><i class="fab fa-instagram"></i> Instagram</button>
+  </a>
+
+  <a href="https://twitter.com/tuusuario" target="_blank">
+    <button class="twitter"><i class="fab fa-x-twitter"></i> X</button>
+  </a>
+
+  <a href="https://https://www.linkedin.com/in/mauricio-villamandos-48b29a16a" target="_blank">
+    <button class="linkedin"><i class="fab fa-linkedin-in"></i> LinkedIn</button>
+  </a>
+
+</div>
+    </nav>
+        <a href="index.html">
+        <img src="/images/logo.png" alt="Logo de Mi Empresa" class="logo">
+        </a>
+    
+        <title>HCPE - Historia Clínica Psiquiátrica Electrónica</title>
+    
+        <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&family=Consolas&display=swap" rel="stylesheet">
+    
+        <link rel="stylesheet" href="css/style o.css">
+
+    </head>
+
+<body>
+    <header class="header">
+        <h1> <STRONG></STRONG>HCPE - [Historia Clínica Psiquiátrica]</h1>
+        
+        <div class="doctor-info">
+            <p><strong>Dr. Mauricio Villamandos - Médico Especialista en Psiquiatría - MP: 07489</strong></p>
+            <p><strong>Posadas, Misiones – Argentina</strong></p>
+            <p><strong>infopsicodinamyc@gmail.com | Teléfono: 3765 041832></strong></p>
+        </div>
+    </header>
+        
+        <main class="container">
+        <section class="form-section">
+            <h1>1.DATOS GENERALES</h1>
+            
+            <!-- Primera fila compacta -->
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>Lugar de evaluación:</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Fecha de evaluación:</label>
+                    <input type="date" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Modalidad:</label>
+                    <select class="form-control">
+                        <option value="">Presencial</option>
+                        <option value="virtual">Virtual</option>
+                        <option value="domicilio">Domicilio</option>
+                        <option value="urgencia">Urgencia</option>
+                        <option value="otros">Otros</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Código del paciente:</label>
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+            
+            <!-- Datos personales agrupados -->
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>Nombre:</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Apellido:</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>DNI:</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Nacionalidad:</label>
+                    <select class="form-control">
+                        <option value="">Seleccione...</option>
+                        <option value="Argentina">Argentino/a</option>
+                        <option value="Paraguay">Paraguayo/a</option>
+                        <option value="Brasil">Brasilero/a</option>
+                        <option value="Uruguay">Uruguayo/a</option>
+                        <option value="Otros">Otros</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Datos demográficos -->
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>Sexo/género:</label>
+                    <select class="form-control">
+                        <option value="">Seleccione...</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="femenino">Femenino</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Fecha de nacimiento:</label>
+                    <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" required onchange="calcularEdad(this.value)">
+                </div>
+                <div class="form-group">
+                    <label>Edad actual:</label>
+                    <input type="text" id="edad" name="edad" readonly>
+                </div>
+                <div class="form-group">
+                    <label>Estado civil:</label>
+                    <select class="form-control">
+                        <option value="">Seleccione...</option>
+                        <option value="soltero">Soltero</option>
+                        <option value="casado">Casado</option>
+                        <option value="viudo">Viudo</option>
+                        <option value="divorciado">Divorciado</option>
+                        <option value="concubinato">Concubinato</option>
+                        <option value="otros">Otros</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Información de contacto -->
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>Domicilio:</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>C.P.:</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Celular:</label>
+                    <input type="tel" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Email:</label>
+                    <input type="email" class="form-control">
+                </div>
+            </div>
+            
+            <!-- Información profesional y de salud -->
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>Ocupación:</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Escolaridad:</label>
+                    <select class="form-control">
+                        <option value="">Seleccione...</option>
+                        <option value="primario">Primario</option>
+                        <option value="secundario">Secundario</option>
+                        <option value="terciario">Terciario</option>
+                        <option value="universitario">Universitario</option>
+                        <option value="otros">Otros</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Obra social:</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Número:</label>
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+            
+            <!-- Contactos de referencia -->
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>Referente 1:</label>
+                    <input type="text" class="form-control" placeholder="nombre y apellido">
+                </div>
+                <div class="form-group">
+                    <label>Contacto:</label>
+                    <input type="tel" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Relación:</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Psicólogo/a:</label>
+                    <input type="text" class="form-control" placeholder="nombre y apellido">
+                </div>
+            </div>
+            
+            <!-- Observaciones -->
+            <div class="form-group">
+                <label>Observaciones:</label>
+                <textarea class="form-control"></textarea>
+            </div>
+        </section>
+
+        <section class="form-section">
+            <h2>2. MOTIVO DE CONSULTA</h2>
+            <div class="form-group">
+            <textarea class="form-control large-textarea"></textarea>
+            </div>
+         </section>
+
+    <section class="form-section">
+        <h2>3. ANTECEDENTES DE ENFERMEDAD ACTUAL</h2>
+        <div class="form-group">
+            <textarea class="form-control large-textarea"></textarea>
+        </div>
+    </section>
+
+    <section class="form-section">
+        <h2>4. ANTECEDENTES PSIQUIÁTRICOS</h2>
+        <div class="form-group">
+            <label>Diagnósticos/Presuntivos previos:</label>
+            <textarea class="form-control"></textarea>
+        </div>
+        
+        <div class="form-group">
+            <label>Hospitalizaciones psiquiátricas previas:</label>
+                <select class="radio-group">
+                <label><option type="radio" name="hospitalizaciones" value="Selecione una opcioncion"></option></label>
+                <label><option type="radio" name="hospitalizaciones" value="si"> Sí</label>
+                <label><option type="radio" name="hospitalizaciones" value="no"> No</label>
+            
+                </select>
+            <textarea class="form-control" placeholder="Detalles"></textarea>
+        </div>
+        
+        <div class="form-group">
+            <label>Intentos de suicidio previos:</label>
+                <select class="radio-group">
+                <label><option type="radio" name="suicidio" value="Selecione una opcioncion"></option></label>
+                <label><option type="radio" name="suicidio" value="si"> Sí</label>
+                <label><option type="radio" name="suicidio" value="no"> No</label>
+            
+                </select>
+            <textarea class="form-control" placeholder="Detalles"></textarea>
+        </div>
+            <div class="sub-options">
+                <div class="form-group">
+                    <label>Número de intentos:</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Método utilizado:</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Último intento:</label>
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label>Tratamientos previos:</label>
+            <textarea class="form-control"></textarea>
+            <div class="sub-options">
+                <div class="form-group">
+                    <label>Medicación y/o esquemas utilizados:</label>
+                    <textarea class="form-control"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Otros:</label>
+                    <textarea class="form-control"></textarea>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="form-section">
+        <h2>5. ANTECEDENTES MÉDICOS</h2>
+        <select class="form-group">
+            <label>Enfermedades médicas Agudas/Semi Agudas:</label>
+            <div class="radio-group">
+                <label><option type="radio" name="enfermedades" value="si">elija una opcion</option></label>
+                <label><option type="radio" name="enfermedades" value="si">Sí</label>
+                <label><option type="radio" name="enfermedades" value="no">No</label>
+            </select>
+            <textarea class="form-control" placeholder="Especificar"></textarea>
+        </div>
+        
+        <div class="form-group">
+            <label>Cirugías previas:</label>
+            <select class="radio-group">
+                <label><option type="radio" name="cirugias" value="si"> Sí</label>
+                <label><option type="radio" name="cirugias" value="no"> No</label>
+            </select>
+            <textarea class="form-control" placeholder="Especificar"></textarea>
+        </div>
+        
+        <div class="form-group">
+            <label>Alergias:</label>
+            <select class="radio-group">
+                <label><option type="radio" name="sustancias" value="si"> ingrese su Respuesta </option></label>
+                <label><option type="radio" name="alergias" value="si"> Sí</label>
+                <label><option type="radio" name="alergias" value="no"> No</label>
+            </select>
+            <textarea class="form-control" placeholder="Especificar"></textarea>
+        </div>
+        
+        <div class="form-group">
+            <label>Consumo de sustancias:</label>
+            <select class="radio-group">
+                <label><option type="radio" name="sustancias" value="si"> ingrese su Respuesta </option></label>
+                <label><option type="radio" name="sustancias" value="si"> Sí</label>
+                <label><option  type="radio" name="sustancias" value="no"> No</label>
+            </select>
+        </div>
+            
+            <div class="sub-options">
+                <div class="form-group">
+                    
+                    <label>Alcohol:</label>
+                    <select class="radio-group">
+                        <label><option type="radio" name="alcohol" value="si"> Sí</label>
+                        <label><option type="radio" name="alcohol" value="no"> No</label>
+                    </select>
+                
+                </div>
+                <div class="form-group">
+                    <label>Opiáceos:</label>
+                    <select class="radio-group">
+                        <label><option type="radio" name="opiaceos" value="si"> Sí</label>
+                        <label><option  type="radio" name="opiaceos" value="no"> No</label>
+                    </select>
+                
+                </div>
+                
+                <div class="form-group">
+                    <label>Drogas ilícitas:</label>
+                    <select class="radio-group">
+                        <label><option type="radio" name="drogas" value="si"> Sí</label>
+                        <label><option type="radio" name="drogas" value="no"> No</label>
+                    </select>
+                    <textarea class="form-control"></textarea placeholder="Especificar"></textarea>
+                </div>
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label>Antecedentes Ginecoobstetricos (si corresponde):</label>
+            <textarea class="form-control"></textarea>
+        </div>
+    </section>
+
+    <section class="form-section">
+        <h2>6. ANTECEDENTES FAMILIARES</h2>
+        <div class="form-group">
+            <label>Historia de enfermedad psiquiátrica en la familia:</label>
+            <textarea class="form-control"></textarea>
+        </div>
+        <div class="form-group">
+            <label>Historia de suicidio en la familia:</label>
+            <textarea class="form-control"></textarea>
+        </div>
+        <div class="form-group">
+            <label>Parentesco:</label>
+            <input type="text" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Historia de consumo de sustancias:</label>
+            <textarea class="form-control"></textarea>
+        </div>
+        <div class="form-group">
+            <label>Parentesco:</label>
+            <input type="text" class="form-control">
+        </div>
+    </section>
+
+    <section class="form-section">
+        <h2>7. HISTORIA PSICOSOCIAL</h2>
+        <div class="form-group">
+            <label>Dinámica familiar actual:</label>
+            <textarea class="form-control"></textarea>
+        </div>
+        <div class="form-group">
+            <label>Red de apoyo:</label>
+            <textarea class="form-control"></textarea>
+        </div>
+        <div class="form-group">
+            <label>Eventos vitales estresantes recientes:</label>
+            <textarea class="form-control"></textarea>
+        </div>
+    </section>
+
+    <main class="container">
+        <section class="form-section">
+            <h2>8. EXPLORACIÓN PSICOPATOLÓGICA</h2>
+            
+            <h3>Apariencia y conducta</h3>
+            
+            <div class="form-group">
+                <label>Higiene y arreglo personal:</label>
+                <select class="form-control">
+                    <option value="">Seleccione una opción...</option>
+                    <option value="descuidado">Descuidado / pobre higiene</option>
+                    <option value="arreglado">Excesivamente arreglado o llamativo</option>
+                    <option value="inadecuado">Inadecuado para la situación</option>
+                    <option value="normal">Normal</option>
+                </select>
+                <textarea class="form-control" placeholder="Observación"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>Actitud hacia el examinador:</label>
+                <select class="form-control">
+                    <option value="colaborador">Colaborador</option>
+                    <option value="hostil">Hostil</option>
+                    <option value="evasivo">Evasivo</option>
+                    <option value="desconfiado">Desconfiado</option>
+                    <option value="infantilizado">Infantilizado</option>
+                    <option value="indiferente">Indiferente</option>
+                </select>
+                <textarea class="form-control" placeholder="Observación"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>Expresión facial:</label>
+                <select class="form-control">
+                    <option value="">Seleccione una opción...</option>
+                    <option value="expresiva">Expresiva / normal</option>
+                    <option value="hipomimica">Hipomímica</option>
+                    <option value="inexpresiva">Inexpresiva / congelada</option>
+                    <option value="labilidad">Labilidad emocional</option>
+                </select>
+                <textarea class="form-control" placeholder="Observación"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>Conducta general durante la entrevista:</label>
+                <select class="form-control">
+                    <option value="normal">Normal</option>
+                    <option value="inquieto">Inquieto / agitado</option>
+                    <option value="retraido">Retraído / inhibido</option>
+                    <option value="bizarro">Bizarro / inusual</option>
+                    <option value="estereotipias">Estereotipias o manierismos</option>
+                    <option value="agresivo">Conductas agresivas o provocativas</option>
+                </select>
+                <textarea class="form-control" placeholder="Observación"></textarea>
+            </div>
+            
+            <h3>Estado de ánimo y afecto</h3>
+            
+            <div class="form-group">
+                <label>Estado de Ánimo: (referido por el paciente)</label>
+                <select class="form-control">
+                    <option value="">Seleccione una opción...</option>
+                    <option value="eutimico">Eutímico – Ánimo dentro de los rangos normales</option>
+                    <option value="deprimido">Deprimido – Tristeza persistente, desesperanza, llanto fácil</option>
+                    <option value="ansioso">Ansioso – Nerviosismo, inquietud, sensación de peligro imminente</option>
+                    <option value="irritable">Irritable – Respuesta emocional exacerbada, tendencia al enojo</option>
+                    <option value="eufórico">Eufórico – Estado anormalmente elevado o expansivo</option>
+                    <option value="apático">Apático – Falta de interés o motivación</option>
+                </select>
+                <textarea class="form-control" placeholder="Observación"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>Afecto: (observable por el clínico)</label>
+                <select class="form-control">
+                    <option value="">Seleccione una opción...</option>
+                    <option value="congruente">Congruente – Emoción acorde al discurso o situación</option>
+                    <option value="incongruente">Incongruente – Expresión emocional no coincide con el contenido verbal</option>
+                    <option value="plano">Plano – Ausencia casi total de reactividad emocional</option>
+                    <option value="hipomimico">Hipomímico – Reducción en la expresión facial o gestual</option>
+                    <option value="lábil">Lábil – Cambios emocionales rápidos e intensos</option>
+                    <option value="exaltado">Exaltado – Afecto aumentado en intensidad, expansivo</option>
+                </select>
+                <textarea class="form-control" placeholder="Observación"></textarea>
+            </div>
+        </section>
+    </main>
+
+    <main class="container">
+        <section class="form-section">
+            <h3>Forma del pensamiento</h3>
+            <div class="form-group">
+                <label>Forma del pensamiento:</label>
+                <select class="form-control">
+                    <option value="">Seleccione una opción...</option>
+                    <option value="logico">Lógico: Secuencia clara, sin alteraciones</option>
+                    <option value="circunstancial">Circunstancial: Rodeos innecesarios, pero llega al punto</option>
+                    <option value="tangencial">Tangencial: Responde de forma indirecta; no llega al objetivo</option>
+                    <option value="disgregado">Disgregado: Saltos ilógicos entre ideas; falta de conexión</option>
+                    <option value="fuga">Fuga de ideas: Flujo rápido y sin conexión aparente</option>
+                    <option value="bloqueo">Bloqueo: Interrupción repentina del hilo del pensamiento</option>
+                    <option value="perseverante">Perseverante: Repite ideas o frases sin objetivo</option>
+                </select>
+                <textarea class="form-control" placeholder="Observación"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>Velocidad del pensamiento:</label>
+                <select class="form-control">
+                    <option value="">Seleccione una opción...</option>
+                    <option value="normal">Normal: Flujo verbal adecuado</option>
+                    <option value="taquipsiquia">Taquipsiquia: Pensamiento acelerado</option>
+                    <option value="bradipsiquia">Bradipsiquia: Pensamiento lento, respuestas demoradas</option>
+                </select>
+                <textarea class="form-control" placeholder="Observación"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>Curso del pensamiento:</label>
+                <select class="form-control">
+                    <option value="">Seleccione una opción...</option>
+                    <option value="normal">Normal: Desarrollo fluido y organizado</option>
+                    <option value="inhibido">Inhibido: Lento y difícil de expresar</option>
+                    <option value="prolijo">Prolijo: Detalles excesivos irrelevantes</option>
+                    <option value="interrumpido">Interrumpido: Cortes bruscos del discurso</option>
+                </select>
+                <textarea class="form-control" placeholder="Observación"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>Contenido del pensamiento:</label>
+                <select class="form-control">
+                    <option value="">Seleccione una opción...</option>
+                    <option value="normal">Normal: Desarrollo fluido y organizado</option>
+                    <option value="inhibido">Inhibido: Lento y difícil de expresar</option>
+                    <option value="prolijo">Prolijo: Detalles excesivos irrelevantes</option>
+                    <option value="interrumpido">Interrumpido: Cortes bruscos del discurso</option>
+                </select>
+                <textarea class="form-control" placeholder="Observación"></textarea>
+            </div>
+            
+            <h3>Sensopercepción</h3>
+            <div class="form-group">
+                <label>Alucinaciones:</label>
+                <select class="form-control">
+                    <option value="ninguna">Ninguna</option>
+                    <option value="auditiva">Auditiva</option>
+                    <option value="visual">Visuales</option>
+                    <option value="tactil">Táctiles</option>
+                    <option value="olfativa">Olfativas</option>
+                    <option value="gustativa">Gustativas</option>
+                </select>
+                <textarea class="form-control" placeholder="Observación"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>Pseudoalucinaciones:</label>
+                <select class="form-control">
+                    <option value="">Seleccione una opción...</option>
+                    <option value="presentes">Presentes</option>
+                    <option value="ausentes">Ausentes</option>
+                </select>
+                <textarea class="form-control" placeholder="Observación"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>Ilusiones:</label>
+                <select class="form-control">
+                    <option value="">Seleccione una opción...</option>
+                    <option value="presentes">Presentes</option>
+                    <option value="ausentes">Ausentes</option>
+                </select>
+                <textarea class="form-control" placeholder="Observación"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>Despersonalización:</label>
+                <select class="form-control">
+                    <option value="">Seleccione una opción...</option>
+                    <option value="presente">Presente</option>
+                    <option value="ausente">Ausente</option>
+                </select>
+                <textarea class="form-control" placeholder="Observación"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>Desrealización:</label>
+                <select class="form-control">
+                    <option value="">Seleccione una opción...</option>
+                    <option value="presente">Presente</option>
+                    <option value="ausente">Ausente</option>
+                </select>
+                <textarea class="form-control" placeholder="Observación"></textarea>
+            </div>
+        </section>
+    </main>
+
+    <main class="container">
+        <section class="form-section">
+            <h3>Orientación</h3>
+            
+            <div class="form-group">
+                <label>Orientación en tiempo:</label>
+                <select class="form-control">
+                    <option value="">Seleccione una opción...</option>
+                    <option value="conservada">Conservada</option>
+                    <option value="parcial">Parcialmente alterada</option>
+                    <option value="alterada">Totalmente alterada</option>
+                </select>
+                <textarea class="form-control" placeholder="Observación"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>Orientación en espacio:</label>
+                <select class="form-control">
+                    <option value="">Seleccione una opción...</option>
+                    <option value="conservada">Conservada</option>
+                    <option value="parcial">Parcialmente alterada</option>
+                    <option value="alterada">Totalmente alterada</option>
+                </select>
+                <textarea class="form-control" placeholder="Observación"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>Orientación personal:</label>
+                <select class="form-control">
+                    <option value="">Seleccione una opción...</option>
+                    <option value="conservada">Conservada</option>
+                    <option value="parcial">Parcialmente alterada</option>
+                    <option value="alterada">Totalmente alterada</option>
+                </select>
+                <textarea class="form-control" placeholder="Observación"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>Orientación social (opcional):</label>
+                <select class="form-control">
+                    <option value="">Seleccione una opción...</option>
+                    <option value="conservada">Conservada</option>
+                    <option value="parcial">Parcialmente alterada</option>
+                    <option value="alterada">Totalmente alterada</option>
+                </select>
+                <textarea class="form-control" placeholder="Observación"></textarea>
+            </div>
+            
+            <h3>Atención y concentración</h3>
+            
+            <div class="form-group">
+                <label>Atención:</label>
+                <select class="form-control">
+                    <option value="">Seleccione una opción...</option>
+                    <option value="conservada">Conservada</option>
+                    <option value="distraida">Distraída fácilmente</option>
+                    <option value="hipervigilante">Hipervigilante</option>
+                    <option value="hipoactiva">Hipoactiva</option>
+                    <option value="ausente">Ausente</option>
+                </select>
+                <textarea class="form-control" placeholder="Observación"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>Concentración:</label>
+                <select class="form-control">
+                    <option value="">Seleccione una opción...</option>
+                    <option value="conservada">Conservada</option>
+                    <option value="lenta">Lenta</option>
+                    <option value="fluctuante">Fluctuante</option>
+                    <option value="imposible">Imposible de sostener</option>
+                </select>
+                <textarea class="form-control" placeholder="Observación"></textarea>
+            </div>
+            
+            <h3>Memoria</h3>
+            <div class="form-group">
+                <label>Memoria Inmediata:</label>
+                <select class="form-control">
+                    <option value="">Seleccione una opción...</option>
+                    <option value="conservada">Conservada</option>
+                    <option value="disminuida">Disminuida</option>
+                    <option value="ausente">Ausente</option>
+                </select>
+                <textarea class="form-control" placeholder="Observación"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>Memoria reciente:</label>
+                <select class="form-control">
+                    <option value="">Seleccione una opción...</option>
+                    <option value="conservada">Conservada</option>
+                    <option value="disminuida">Disminuida</option>
+                    <option value="ausente">Ausente</option>
+                </select>
+                <textarea class="form-control" placeholder="Observación"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>Memoria remota:</label>
+                <select class="form-control">
+                    <option value="">Seleccione una opción...</option>
+                    <option value="conservada">Conservada</option>
+                    <option value="disminuida">Disminuida</option>
+                    <option value="ausente">Ausente</option>
+                </select>
+                <textarea class="form-control" placeholder="Observación"></textarea>
+            </div>
+        </section>
+    </main>
+
+    <main class="container">
+        <section class="form-section">
+            <h3>Voluntad</h3>
+            
+            <div class="form-group">
+                <label>Iniciativa (comenzar una acción):</label>
+                <select class="form-control">
+                    <option value="">Seleccione una opción...</option>
+                    <option value="conservada">Conservada – Inicia actividades por sí mismo</option>
+                    <option value="disminuida">Disminuida – Requiere estímulo externo</option>
+                    <option value="ausente">Ausente – No inicia ninguna acción, incluso básica</option>
+                </select>
+                <textarea class="form-control" placeholder="Observación"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>Perseverancia (mantener una acción):</label>
+                <select class="form-control">
+                    <option value="">Seleccione una opción...</option>
+                    <option value="conservada">Conservada – Completa tareas y mantiene su curso</option>
+                    <option value="disminuida">Disminuida – Se distrae fácilmente, abandona tareas</option>
+                    <option value="ausente">Ausente – Incapacidad total para sostener una acción</option>
+                </select>
+                <textarea class="form-control" placeholder="Observación"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>Interés en actividades previas:</label>
+                <select class="form-control">
+                    <option value="">Seleccione una opción...</option>
+                    <option value="conservado">Conservado – Participa con gusto en lo que antes le gustaba</option>
+                    <option value="disminuido">Disminuido – Muestra desinterés parcial</option>
+                    <option value="ausente">Ausente – Anhedonia marcada; abandono total de intereses</option>
+                </select>
+                <textarea class="form-control" placeholder="Observación"></textarea>
+            </div>
+            
+            <h3>Psicomotricidad</h3>
+            
+            <div class="form-group">
+                <label>Actividad motora global:</label>
+                <select class="form-control">
+                    <option value="">Seleccione una opción...</option>
+                    <option value="normal">Normal – Movimiento y postura adecuados</option>
+                    <option value="hipocinesia">Hipocinesia – Lentitud, inhibición, escasa gesticulación</option>
+                    <option value="hipercinesia">Hipercinesia – Inquietud motora, agitación</option>
+                    <option value="acinesia">Acinesia – Inmovilidad, rigidez postural</option>
+                </select>
+                <textarea class="form-control" placeholder="Observación"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>Postura:</label>
+                <select class="form-control">
+                    <option value="">Seleccione una opción...</option>
+                    <option value="espontanea">Espontánea / relajada</option>
+                    <option value="tensa">Tensa / rígida</option>
+                    <option value="inusual">Inusual / extraña (ej. posturas bizarras o mantenidas)</option>
+                    <option value="catatonica">Catatónica (ej. flexibilidad cérea, negativismo)</option>
+                </select>
+                <textarea class="form-control" placeholder="Observación"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>Movimientos involuntarios / anómalos:</label>
+                <select class="form-control">
+                    <option value="ninguno">Ninguno observado</option>
+                    <option value="tics">Tics</option>
+                    <option value="estereotipias">Estereotipias (repetitivos, sin propósito)</option>
+                    <option value="manierismos">Manierismos (gestos exagerados, teatrales)</option>
+                    <option value="temblor">Temblor</option>
+                    <option value="ecopraxia">Ecopraxia / ecolalia</option>
+                    <option value="automatismos">Automatismos</option>
+                </select>
+                <textarea class="form-control" placeholder="Observación"></textarea>
+            </div>
+            
+            <h3>Juicio e introspección</h3>
+            
+            <div class="form-group">
+                <label>Juicio:</label>
+                <select class="form-control">
+                    <option value="">Seleccione una opción...</option>
+                    <option value="conservado">Conservado – Evaluación realista y conducta ajustada</option>
+                    <option value="parcial">Parcialmente alterado – Algunas distorsiones en razonamiento o autocrítica</option>
+                    <option value="alterado">Alterado – Decisiones incoherentes con la realidad o autopercepción deficiente</option>
+                    <option value="grave">Gravemente alterado / Ausente – Pérdida total de criterio sobre realidad, enfermedad o riesgos</option>
+                </select>
+                <textarea class="form-control" placeholder="Observación"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>Tipos clásicos de alteración del juicio:</label>
+                <select class="form-control">
+                    <option value="suspendido">Juicio suspendido – Incapacidad total para evaluar la realidad</option>
+                    <option value="desviado">Juicio desviado – El razonamiento es lógico, pero parte de premisas falsas (ej. delirios)</option>
+                    <option value="debilitado">Juicio debilitado – Falta de profundidad o superficialidad en la toma de decisiones</option>
+                    <option value="influenciado">Juicio influenciado – Distorsionado por emociones intensas o ideología rígida</option>
+                    <option value="inmaduro">Juicio inmaduro – Propio de personas con desarrollo psicoemocional infantilizado</option>
+                </select>
+                <textarea class="form-control" placeholder="Observación"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>Introspección (conciencia de enfermedad):</label>
+                <select class="form-control">
+                    <option value="">Seleccione una opción...</option>
+                    <option value="ausente">Ausente – Niega totalmente la enfermedad; puede rechazar todo tratamiento</option>
+                    <option value="minima">Mínima – Reconoce síntomas, pero los atribuye a causas externas o minimiza su gravedad</option>
+                    <option value="parcial">Parcial – Acepta parcialmente el diagnóstico, pero con dudas o resistencia</option>
+                    <option value="adecuada">Adecuada – Reconoce claramente la enfermedad y colabora con el tratamiento</option>
+                    <option value="critica">Crítica – Comprende profundamente su cuadro, evolución y necesidad terapéutica</option>
+                </select>
+                <textarea class="form-control" placeholder="Observación"></textarea>
+            </div>
+        </section>
+    </main>
+    <br>
+
+<main class="container">
+    <section class="form-section">
+        <strong> ><h2>9. [Diagnóstico Multiaxial] – [CIE-10 / DSM 5] (Modelo Clásico de 5 ejes)</strong></h2>
+        
+        <div class="axis-group">
+            <h3>❖ Eje I: Trastornos clínicos principales</h3>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>CÓDIGO:</label>
+                    <input type="text" class="form-control" placeholder="Ej. F20.0, F32.2">
+                </div>
+                <div class="form-group">
+                    <label>Observación:</label>
+                    <textarea class="form-control" placeholder="Describa el trastorno (ej. esquizofrenia, depresión, trastorno de ansiedad)"></textarea>
+                </div>
+            </div>
+        </div>
+        
+        <div class="axis-group">
+            <h3>❖ Eje II: Discapacidad mental y trastornos del desarrollo</h3>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>CÓDIGO:</label>
+                    <input type="text" class="form-control" placeholder="Ej. F70, F84.0">
+                </div>
+                <div class="form-group">
+                    <label>Observación:</label>
+                    <textarea class="form-control" placeholder="Describa (ej. retraso mental, autismo)"></textarea>
+                </div>
+            </div>
+        </div>
+        
+        <div class="axis-group">
+            <h3>❖ Eje III: Enfermedades médicas generales relevantes</h3>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>CÓDIGO:</label>
+                    <input type="text" class="form-control" placeholder="Ej. E11.9, G40.909">
+                </div>
+                <div class="form-group">
+                    <label>Observación:</label>
+                    <textarea class="form-control" placeholder="Describa (ej. epilepsia, VIH, diabetes)"></textarea>
+                </div>
+            </div>
+        </div>
+        
+        <div class="axis-group">
+            <h3>❖ Eje IV: Factores psicosociales y ambientales</h3>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>CÓDIGO:</label>
+                    <input type="text" class="form-control" placeholder="Ej. Z56.0, Z63.4">
+                </div>
+                <div class="form-group">
+                    <label>Observación:</label>
+                    <textarea class="form-control" placeholder="Describa (ej. desempleo, pobreza, duelo, violencia)"></textarea>
+                </div>
+            </div>
+        </div>
+        
+        <div class="axis-group">
+            <h3>❖ Eje V: Nivel global de funcionamiento</h3>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>Puntaje (0-100):</label>
+                    <input type="number" min="0" max="100" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Escala GAF/WHODAS:</label>
+                    <select class="form-control">
+                        <option value="">Seleccione rango...</option>
+                        <option value="91-100">91–100 - Funcionamiento superior. Sin síntomas. Totalmente adaptado.</option>
+                        <option value="81-90">81–90 - Síntomas mínimos. Adecuado en todas las áreas.</option>
+                        <option value="71-80">71–80 - Problemas leves. Funcionamiento general bueno.</option>
+                        <option value="61-70">61–70 - Síntomas moderados. Algunas dificultades laborales/sociales.</option>
+                        <option value="51-60">51–60 - Moderada afectación de relaciones, trabajo o humor.</option>
+                        <option value="41-50">41–50 - Problemas graves: ideación suicida, relaciones conflictivas.</option>
+                        <option value="31-40">31–40 - Alteración grave del pensamiento o conducta.</option>
+                        <option value="21-30">21–30 - Alucinaciones frecuentes o conducta seriamente alterada.</option>
+                        <option value="11-20">11–20 - Peligro persistente para sí o para otros. Comunicación mínima.</option>
+                        <option value="1-10">1–10 - Riesgo extremo. Total disfunción.</option>
+                        <option value="0">0 - Información insuficiente para evaluar.</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Observación:</label>
+                <textarea class="form-control" placeholder="Describa el nivel de funcionamiento del paciente"></textarea>
+            </div>
+        </div>
+    </section>
+</main>
+
+    <section class="form-section">
+        <h2>10. PLAN DE TRATAMIENTO</h2>
+        
+         <div class="form-group">
+                <label> Tipos</label>
+                <select class="form-control">
+                    <option value="">Seleccione una opción...</option>
+                    <option value="Psiquiatrico exclusivamente">Psiquiatrico</option>
+                    <option value="Psiquiatrico y psicologico">Psiquiatrico y psicologico</option>
+                    <option value="Interdisciplinario">Interdisciplinario</option>
+                    <option value="Multidisciplinario">Multidisciplinario</option>
+                    <option value="Otros">Otros</option>
+                </select>
+                <textarea class="form-control" placeholder="Observación"></textarea>
+            </div>
+
+        <div class="form-group">
+                <label>Frecuencia de seguimiento:</label>
+                <select class="form-control">
+                    <option value="">Seleccione una opción...</option>
+                    <option value="Diario o menos de una semana">Diario o menos de una semana</option>
+                    <option value="Semanal">Semanal</option>
+                    <option value="Quincenal">Quincenal</option>
+                    <option value="Mensual">Mensual</option>
+                    <option value="Otros">Otros</option>
+                </select>
+                <textarea class="form-control" placeholder="Observación"></textarea>
+            </div>
+
+        
+        <div class="form-group">
+            <label>PRONÓSTICO Y PLAN DE SEGUIMIENTO:</label>
+            <select class="radio-group">
+                <option value="">Seleccione una opción...</option><option value="">Seleccione una opción...</option>
+                <label><option value="radio" name="pronostico" value="bueno"> Bueno</label>
+                <label><option value="radio" name="pronostico" value="reservado"> Reservado</label>
+                <label><option value="radio" name="pronostico" value="malo"> Malo</label>
+                </select>
+                <textarea class="form-control" placeholder="Observación"></textarea>
+            </div>
+
+        </div>
+        <div class="form-group">
+            <label>Reevaluación:</label>
+            <select class="radio-group">
+                <option value="">Seleccione una opción...</option><option value="">Seleccione una opción...</option>
+                <label><option tipe="radio" name="reevaluacion" value="si"> Sí</label>
+                <label><option tipe="radio" name="reevaluacion" value="no"> No</label>
+                <label><option tipe="radio" name="Otros" value="Otros"> Otros</label>
+            
+                </select>
+                <textarea class="form-control" placeholder="Observación"></textarea>
+            </div>
+        
+            <div class="form-group">
+            <label>Fecha próxima consulta:</label>
+            <input type="date" class="form-control">
+            <textarea class="form-control" placeholder="Observación"></textarea>
+        </div>
+    </section>
+    <br>
+    <br>
+
+    <div class="signature-section"> 
+            <p> <strong> Firma y sello profesional</strong></p>
+            <div class="signature-line"></div>
+        </div>
+</main>
+<br>
+
+ <footer class="footer">
+        <button class="btn btn-print">Imprimir</button>
+        <button class="btn btn-save">Guardar</button>
+        <button class="btn btn-next">Siguiente Parte</button>
+    </footer>
+    <br><strong> </strong>
+
+    <footer class="footer">
+        <p> <strong>[HCPE] v2.0 &copy; 2025 - [Historia Clínica Psiquiátrica Electrónica] </strong></p>
+        <p> <strong>Dr. Mauricio Villamandos - MP: 07489 </strong></p>
+        </footer>
+
+
+    <script src="https://unpkg.com/docx@7.8.2/build/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script src="/js/word script.js"></script>
+
+    
+
+
+</body>
+</html>
+       
+            
+
+
+    
