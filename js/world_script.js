@@ -1,4 +1,36 @@
+      function empezarDictado() {
+      const campo = document.getElementById("salida");
+      const Reconocimiento = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+      if (!Reconocimiento) {
+        alert("Tu navegador no soporta reconocimiento de voz.");
+        return;
+      }
+
+      const reconocimiento = new Reconocimiento();
+      reconocimiento.lang = "es-AR";
+      reconocimiento.interimResults = false;
+      reconocimiento.maxAlternatives = 1;
+
+      reconocimiento.onstart = () => {
+        console.log("Escuchando...");
+      };
+
+      reconocimiento.onresult = (event) => {
+        const texto = event.results[0][0].transcript;
+        campo.value += texto + " ";
+      };
+
+      reconocimiento.onerror = (event) => {
+        console.error("Error de dictado:", event.error);
+        alert("Error: " + event.error);
+      };
+
+      reconocimiento.start();
+    }
+
 // Auto-expand textareas
+
 function autoExpand(textarea) {
     textarea.style.height = 'auto';
     textarea.style.height = (textarea.scrollHeight) + 'px';
